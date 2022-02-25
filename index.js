@@ -42,14 +42,14 @@ function calculatesFarePrice(start, destination){
         if (d<=400){
             return 0;
         }
-       else if (400<d<2000){
+       else if (400<=d<=2000){
             return ((d-400)*0.02);
         }
-        else  if (2000<d>=2500){
-            return((destination-start)*25)
+        else  if (2000<d>2500){
+            return 25;
         }
         
-        else if(d>=2500){
+        else {
             return ("cannot travel that far");
         }
     }
@@ -59,14 +59,14 @@ function calculatesFarePrice(start, destination){
             if (d<=400){
                 return 0;
             }
-           else if (400<d<2000){
-                return ((d-400)*0.2);
+           else if (400<=d<=2000){
+                return ((d-400)*0.02);
             }
-          else  if (2000<d>=2500){
-              return((start-destination)*25)
+          else  if (2000<d>2500){
+              return 25;
           }
-            else if(d>=2500){
-                return "'cannot travel that far'";
+            else {
+                return "cannot travel that far";
             }
         }
 
