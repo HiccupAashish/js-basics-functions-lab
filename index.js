@@ -36,39 +36,27 @@ function distanceTravelledInFeet(a,b){
     }
 
 }
-function calculatesFarePrice(start, destination){
-    if(destination> start){
-        const d=(destination-start)*264;
-        if (d<=400){
+function calculatesFarePrice(start, destination)
+{
+    
+const f=Math.abs(destination-start)*264;
+        
+        if (f<=400)
+        {
             return 0;
         }
-       else if (400<=d<=2000){
-            return ((d-400)*0.02);
+       else if (400<=f && f<2000)
+        {
+            return ((f-400)*0.02);
         }
-        else  if (2000<d>2500){
+        else  if (f>2000 && f<2500)
+        {
             return 25;
         }
         
-        else {
+        else 
+        {
             return ("cannot travel that far");
         }
     }
-        else if(start>destination)
-        {
-            const d=(start-destination)*264;
-            if (d<=400){
-                return 0;
-            }
-           else if (400<=d<=2000){
-                return ((d-400)*0.02);
-            }
-          else  if (2000<d>2500){
-              return 25;
-          }
-            else {
-                return "cannot travel that far";
-            }
-        }
-
     
-}
